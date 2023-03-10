@@ -1,26 +1,27 @@
+import { useState } from "react";
 import Exp from "./components/Expenses/Exp";
 
 const App = () => {
-  const expenses = [
+  const [expenses, setExpense] = useState([
     {
       id: "e1",
       title: "Food",
       LocationOfExpenditure: "Garden",
-      amount: 94.12,
+      amount: 415,
       date: new Date(2020, 7, 14),
     },
     {
       id: "e2",
       title: "Movie",
       LocationOfExpenditure: "VR Mall",
-      amount: 799.49,
+      amount: 799,
       date: new Date(2021, 2, 12),
     },
     {
       id: "e3",
       title: "Patrol",
       LocationOfExpenditure: "Patrol Pump",
-      amount: 294.67,
+      amount: 300,
       date: new Date(2021, 2, 28),
     },
     {
@@ -30,7 +31,7 @@ const App = () => {
       amount: 450,
       date: new Date(2021, 5, 12),
     },
-  ];
+  ]);
 
   // return React.createElement(
   //   "div",
@@ -41,10 +42,16 @@ const App = () => {
   //   )
   // );
   
+
+  const dltExpHandler = (id) => {
+    setExpense((prvExp) => {
+      return prvExp.filter((exp) => exp.id !== id); 
+    });
+  }
   return (
     <div>
       <h2>Let's get started</h2>
-      <Exp expenses={expenses}/>
+      <Exp expenses={expenses} onDelete={dltExpHandler}/>
     </div>
   );
 }
