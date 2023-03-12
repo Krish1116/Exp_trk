@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Exp from "./components/Expenses/Exp";
+import InputExp from "./components/InputExp/InputExp";
 
 const App = () => {
   const [expenses, setExpense] = useState([
@@ -33,6 +34,11 @@ const App = () => {
     },
   ]);
 
+  const addExpHandler = exp => {
+    console.log('In App.js');
+    console.log(exp);
+  }
+
   // return React.createElement(
   //   "div",
   //   null,
@@ -50,7 +56,7 @@ const App = () => {
   }
   return (
     <div>
-      <h2>Let's get started</h2>
+      <InputExp onAddExpense={addExpHandler}/>
       <Exp expenses={expenses} onDelete={dltExpHandler}/>
     </div>
   );
