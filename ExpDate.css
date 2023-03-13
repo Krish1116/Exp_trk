@@ -1,0 +1,61 @@
+.expense-date {
+  display: flex;
+  flex-direction: column;
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 5px solid #ececec;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+
+
+.expense-date__month {
+  font-size: 0.75rem;
+  font-weight: bold;
+  background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textclip 1.5s linear infinite;
+  display: inline;
+}
+
+.expense-date__year {
+  font-size: 0.75rem;
+  background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textclip 1.5s linear infinite;
+  display: inline;
+}
+
+.expense-date__day {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textclip 1.5s linear infinite;
+  display: inline;
+}
+
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}

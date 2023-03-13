@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Exp from "./components/Expenses/Exp";
 import InputExp from "./components/InputExp/InputExp";
+import logo from "./logo.png";
+import "./logo.css";
 
 const App = () => {
   const [expenses, setExpense] = useState([
@@ -34,10 +36,13 @@ const App = () => {
     },
   ]);
 
-  const addExpHandler = exp => {
-    console.log('In App.js');
-    console.log(exp);
-  }
+  const addExpHandler = (exp) => {
+    console.log("In App.js");
+
+    setExpense((prvExp) => {
+      return [...prvExp, exp];
+    });
+  };
 
   // return React.createElement(
   //   "div",
@@ -47,19 +52,19 @@ const App = () => {
   //     React.createElement(ExpenseItem, { key: ele.id, data: ele })
   //   )
   // );
-  
 
   const dltExpHandler = (id) => {
     setExpense((prvExp) => {
-      return prvExp.filter((exp) => exp.id !== id); 
+      return prvExp.filter((exp) => exp.id !== id);
     });
-  }
+  };
   return (
     <div>
-      <InputExp onAddExpense={addExpHandler}/>
-      <Exp expenses={expenses} onDelete={dltExpHandler}/>
+      <img src={logo} alt="logo" className="logo" />
+      <InputExp onAddExpense={addExpHandler} />
+      <Exp expenses={expenses} onDelete={dltExpHandler} />
     </div>
   );
-}
+};
 
 export default App;

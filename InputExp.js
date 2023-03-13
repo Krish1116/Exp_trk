@@ -1,6 +1,7 @@
 import React from "react";
 import "./InputExp.css";
 import ExpForm from "./ExpForm";
+
 const InputExp = (props) => {
 
   const ExpInfoHandler = (enteredExpInfo) => {
@@ -9,6 +10,7 @@ const InputExp = (props) => {
       id: Math.random().toString()
     }
     props.onAddExpense(expInfo);
+
   }
 
   return (
