@@ -1,34 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
 
 .expenses-filter {
-    color: white;
-    padding: 0 1rem;
-  }
-  
-  .expenses-filter__control {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 0;
-  }
-  
-  .expenses-filter label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: black;
-  }
-  
-  .expenses-filter select {
-    border: 3px solid black;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 1.25);
-    font: inherit;
-    padding: 0.5rem 3rem;
-    font-weight: bold;
-    border-radius: 8px;
-  }
+  color: white;
+  padding: 0 1rem;
+}
 
-  .expenses-filter__control option{
-    background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%);
-  }
-    
+.expenses-filter__control {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.expenses-filter label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.expenses-filter select {
+  border: 3px solid black;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 1.25);
+  font: inherit;
+  /* background-color: #74EBD5; */
+  background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+   
+  padding: 0.5rem 3rem;
+  font-weight: bold;
+  border-radius: 8px;
+}

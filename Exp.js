@@ -1,24 +1,29 @@
 import ExpItem from "./ExpItem";
-import "./Exp.css"
+import "./Exp.css";
 import Card from "../UI/Card";
 import ExpFilter from "./ExpFilter";
 import { useState } from "react";
+
 const Exp = (props) => {
   const { expenses, onDelete } = props;
-  const [filterYr, setFilterYr] = useState('2020');
+  const [filterYr, setFilterYr] = useState("");
 
-  const filtrChangeHandlr = selectedYr => {
+  const filtrChangeHandlr = (selectedYr) => {
     setFilterYr(selectedYr);
-  }
+  };
 
-    return (
-      <Card className="expense">
-        <ExpFilter selected={filterYr} onChange={filtrChangeHandlr}/>
-          {expenses.map(ele => (
-            <ExpItem key={ele.id} data={ele} onDelete={onDelete}/>
-          ))}
-      </Card>
-    );
-}
+  const filterExpenses = expenses.filter(
+    (exp) => !filterYr || exp.date.getFullYear().toString() === filterYr
+  );
+
+  return (
+    <Card className="expense">
+      <ExpFilter selected={filterYr} onChange={filtrChangeHandlr} />
+      {filterExpenses.map((ele) => (
+        <ExpItem key={ele.id} data={ele} onDelete={onDelete} />
+      ))}
+    </Card>
+  );
+};
 
 export default Exp;
