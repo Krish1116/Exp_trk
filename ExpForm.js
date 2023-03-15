@@ -65,9 +65,11 @@ const ExpForm = (props) => {
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredLoe('');
-        setEnteredDate('');
+        setEnteredDate('');        
+    }
 
-        
+    const cancelHandler = () => {
+        props.onCancel();
     }
 
 
@@ -92,6 +94,7 @@ const ExpForm = (props) => {
             </div>
             <div className="new-expense__actions">
                 <button type="submit">Add Expense</button>
+                <button type="button" onClick={cancelHandler}>Cancel</button>
             </div>
         </div>
     </form>
