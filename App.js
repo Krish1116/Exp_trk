@@ -11,34 +11,35 @@ const App = () => {
       title: "Food",
       LocationOfExpenditure: "Garden",
       amount: 415,
-      date: new Date(2020, 7, 14),
+        date: new Date(2020, 7, 14),
     },
     {
       id: "e2",
       title: "Movie",
       LocationOfExpenditure: "VR Mall",
       amount: 799,
-      date: new Date(2021, 2, 12),
+      date: new Date(2022, 2, 12),
     },
     {
       id: "e3",
       title: "Patrol",
       LocationOfExpenditure: "Patrol Pump",
       amount: 300,
-      date: new Date(2021, 2, 28),
+      date: new Date(2019, 2, 28),
     },
     {
       id: "e4",
       title: "Shopping",
       LocationOfExpenditure: "RR Mall",
       amount: 450,
-      date: new Date(2021, 5, 12),
+      date: new Date(2022, 5, 12),
     },
   ]);
 
   const addExpHandler = (exp) => {
     console.log("In App.js");
 
+    //this is use for pullout all input data an show on screen
     setExpense((prvExp) => {
       return [...prvExp, exp];
     });
@@ -58,6 +59,7 @@ const App = () => {
       return prvExp.filter((exp) => exp.id !== id);
     });
   };
+
   return (
     <div>
       <img src={logo} alt="logo" className="logo" />

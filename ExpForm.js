@@ -59,9 +59,10 @@ const ExpForm = (props) => {
             loe: enteredLoe,
             date: new Date(enteredDate)
         }
-
+        // console.log(expInfo);
         props.onSaveExpInfo(expInfo);
 
+        // with the help of this we can  set the new empty input
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredLoe('');
@@ -82,6 +83,7 @@ const ExpForm = (props) => {
             </div>
             <div className="new-expense__control">
                 <label>Expense Amount</label>
+                {/* we can add value attribute , to this input element . this will set the internal value propert which every input ele has  */}
                 <input type='number'onChange={amountChange} value={enteredAmount}/>
             </div>
             <div className="new-expense__control">

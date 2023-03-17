@@ -5,11 +5,13 @@ import ExpForm from "./ExpForm";
 const InputExp = (props) => {
   const [showForm, setShowFrom] = useState(false);
 
+  //submit button work 
   const ExpInfoHandler = (enteredExpInfo) => {
     const expInfo = {
       ...enteredExpInfo,
       id: Math.random().toString(),
     };
+    console.log(expInfo);
     props.onAddExpense(expInfo);
     setShowFrom(false);
   };

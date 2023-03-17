@@ -2,7 +2,6 @@ import "./ExpItem.css";
 import ExpDate from "./ExpDate";
 import Card from "../UI/Card";
 import { useState } from "react";
-import ExpFilter from "./ExpFilter";
 
 
 const ExpItem = (props) => {

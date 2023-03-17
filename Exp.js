@@ -1,8 +1,9 @@
-import ExpItem from "./ExpItem";
 import "./Exp.css";
 import Card from "../UI/Card";
 import ExpFilter from "./ExpFilter";
 import { useState } from "react";
+import ExpContent from "./ExpContent";
+import ExpChart from "./ExpChart";
 
 const Exp = (props) => {
   const { expenses, onDelete } = props;
@@ -19,9 +20,8 @@ const Exp = (props) => {
   return (
     <Card className="expense">
       <ExpFilter selected={filterYr} onChange={filtrChangeHandlr} />
-      {filterExpenses.map((ele) => (
-        <ExpItem key={ele.id} data={ele} onDelete={onDelete} />
-      ))}
+      <ExpChart expenses={filterExpenses} selectedYear={filterYr} />
+      <ExpContent items={filterExpenses} onDelete={onDelete} />
     </Card>
   );
 };
