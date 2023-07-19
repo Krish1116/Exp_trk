@@ -1,0 +1,25 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 2.6rem;
+}
+
+.text-only {
+  background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
+  color: black;
+  position: relative;
+  border-radius: 12px;
+  position: relative;
+  right: 1rem;
+  width: 45rem;
+  height: 3rem;
+}
+
+.text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: -0.6rem;
+  justify-content: center;
+}

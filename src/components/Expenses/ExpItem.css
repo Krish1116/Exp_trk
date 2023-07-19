@@ -1,0 +1,149 @@
+.expense-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 45rem;
+  padding: 0.5rem;
+  margin: 1rem -15px;
+  background-color: #051e28;
+}
+
+.expense-item:hover {
+  transform: scale(1.09);
+  background: #031117;
+}
+
+.expense-item__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-flow: column-reverse;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.expense-item h2 {
+  color: #3a3a3a;
+  font-size: 1rem;
+  flex: 1;
+  margin: 0.5rem;
+  color: white;
+}
+
+.expense-item__price {
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border: 4px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+@media (min-width: 580px) {
+  .expense-item__description {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .expense-item__description h2 {
+    font-size: 1.25rem;
+    background: linear-gradient(
+      to right,
+      #095fab 10%,
+      #25abe8 50%,
+      #57d75b 60%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: textclip 1.5s linear infinite;
+    display: inline;
+  }
+
+  .expense-item__price {
+    display: flex;
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(
+      to right,
+      #095fab 10%,
+      #25abe8 50%,
+      #57d75b 60%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: textclip 1.5s linear infinite;
+    display: inline;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.btn {
+  appearance: none;
+  background-color: #ec4040;
+  border: 5px solid white;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 10px;
+  padding: 12px 25px;
+  margin-left: 1rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+
+.btn:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: #c73d3d;
+}
+
+.btn:focus {
+  box-shadow: rgba(164, 46, 46, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.btn:disabled {
+  background-color: #d39494;
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+
+.btn:active {
+  background-color: #8e2929;
+  box-shadow: rgba(240, 73, 84, 0.2) 0 1px 0 inset;
+}
